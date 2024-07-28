@@ -1,13 +1,23 @@
-let idade = Number(prompt("Qual sua Idade?"));
+let primeiroN = Number(prompt("Digite o primeiro numero"));
+let segundoN = Number(prompt("Digite o segundo numero"));
+let tipoOperacao = prompt("Digite a tipo de operacao");
 
-switch (idade) {
-  case 10:
-    console.log("Você tem 10 anos");
+let soma = 0;
+switch (true) {
+  case tipoOperacao == "+":
+    soma = primeiroN + segundoN;
+    console.log(soma);
     break;
-  case 15:
-    console.log("Você tem 15 anos");
+  case tipoOperacao == "*":
+    soma = primeiroN * segundoN;
+    console.log(soma);
+    break;
+  case tipoOperacao == "-":
+    soma = primeiroN - segundoN;
+    console.log(soma);
     break;
   default:
-    console.log("Você tem mais de 15 anos");
+    soma = primeiroN / segundoN;
+    console.log(soma);
     break;
 }
