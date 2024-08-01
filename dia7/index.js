@@ -1,6 +1,4 @@
 let cadastroNovo = prompt(" deseja cadastrar outro aluno s ou n");
-let nota = 0;
-let sexo = 0;
 
 let alunos = 0;
 let somaTotal = 0;
@@ -15,6 +13,7 @@ while (cadastroNovo == "s") {
   let notaAluno = Number(prompt("Digite a Nota do Aluno"));
   somaTotal = somaTotal + notaAluno;
   let sexoAluno = prompt("Digite o Sexo do Aluno m ou h");
+
   if (sexoAluno == "h") {
     homens = homens + 1;
     if (notaAluno > maiorNotaHomens) {
@@ -31,12 +30,13 @@ while (cadastroNovo == "s") {
 }
 
 media = somaTotal / alunos;
+
 console.log(
   "A MEDIA GERAL É " +
     media +
     " O total de homens foram de " +
     homens +
-    " e mulheres com nota 7 ou mais foi de: " +
+    " e mulheres com nota acima ou igual a 7 " +
     mulheresAprovadas +
     " e a maior nota entre os homens foi de: " +
     maiorNotaHomens
